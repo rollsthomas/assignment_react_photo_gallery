@@ -1,3 +1,145 @@
-* {
+:root {
+  font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 12px;
+  }
+}
+/* * {
   outline: 1px solid gray;
+} */
+
+.App {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.App h1 {
+  font-size: 6rem;
+  font-family: sans-serif;
+}
+
+/*Search bar*/
+.search input[name="search"] {
+  height: 3rem;
+  width: 60%;
+  margin: 1rem 5rem;
+  border-radius: 2px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .search input[name="search"] {
+    height: 1.5rem;
+    width: 60%;
+    border-radius: 2px;
+    border: 1px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+.search input[type="button"] {
+  width: 6rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #e7e5e5;
+}
+/*Filter and Sort*/
+.sort,
+.filter {
+  display: inline-block;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+#filter-wrapper form > * {
+  display: inline-block;
+  margin: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  padding: 3px;
+}
+
+/*sort button icons*/
+
+/*Photos*/
+#photos {
+  margin: 2rem auto;
+}
+#photos p {
+  text-align: left;
+  margin-left: 1rem;
+}
+#photos section {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -ms-flex-justify: space-around;
+}
+
+.card {
+  width: 30%;
+  margin: 1rem;
+  text-align: left;
+  border: 1px solid gray;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    width: 40%;
+  }
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-info p {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-left: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.card-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 760px) {
+  .card-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.card-date {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.card figcaption {
+  margin-left: 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.4rem 0;
 }
