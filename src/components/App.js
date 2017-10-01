@@ -8,18 +8,36 @@ import Filter from "./Filter";
 import Sort from "./Sort";
 import InstagramResponse from "../photos";
 
-const data = InstagramResponse.data;
+var data = InstagramResponse.data;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filteredphotoArray: [],
-      filter_selected: "all"
+      photosArray: data
     };
   }
+
   handleFilter = filter_name => {
-    this.setState({ filter_selected: filter_name });
+    let newArray = [];
+    if (filter_name === "all") {
+      this.setState({
+        photosArray: data
+      });
+    } else {
+      newArray = data
+        .map(card => {
+          if (card.filter === filter_name) {
+            return card;
+          }
+        })
+        .filter(item => {
+          return typeof item === "object";
+        });
+      this.setState({
+        photosArray: newArray
+      });
+    }
   };
 
   render() {
@@ -31,7 +49,10 @@ class App extends Component {
           <Filter filterSelected={this.handleFilter} />
           <Sort />
         </div>
-        <Photos data={data} filter={this.state.filter_selected} />
+        <Photos
+          data={this.state.photosArray}
+          filter={this.state.filter_selected}
+        />
         <Footer />
       </div>
     );

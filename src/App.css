@@ -38,15 +38,10 @@
   padding-left: 1rem;
   font-size: 2rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .search input[name="search"] {
     height: 1.5rem;
-    width: 60%;
-    border-radius: 2px;
     border: 1px solid black;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     padding-left: 0.2rem;
     font-size: 1.2rem;
   }
@@ -60,14 +55,15 @@
   background-color: #e7e5e5;
 }
 /*Filter and Sort*/
+#filter-wrapper {
+  text-align: left;
+}
 .sort,
 .filter {
-  display: inline-block;
-  display: inline-block;
+  display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50%;
 }
 
 #filter-wrapper form > * {
@@ -75,11 +71,30 @@
   margin: 0.5rem 0.8rem;
   font-size: 1.2rem;
   letter-spacing: 5px;
-  padding: 3px;
+  text-align: left;
 }
 
 /*sort button icons*/
-
+input.down {
+  background-image: url(./img/d_arrow.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 2rem;
+  cursor: pointer;
+  width: 8rem;
+  vertical-align: middle;
+}
+input.up {
+  background-image: url(./img/up_arrow.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 2rem;
+  cursor: pointer;
+  width: 8rem;
+  vertical-align: middle;
+}
 /*Photos*/
 #photos {
   margin: 2rem auto;
