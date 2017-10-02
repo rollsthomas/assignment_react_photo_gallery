@@ -5,6 +5,7 @@ const Sort = props => {
     if (e.target.className == "down") {
       e.target.className = "up";
     } else e.target.className = "down";
+    props.sorting(e.target.value, props.data, e.target.className);
   };
   return (
     <section className="sort">
@@ -12,20 +13,14 @@ const Sort = props => {
         <p>Sort By:</p>
         <input
           type="button"
-          className="down"
+          className="up"
           value="Date"
           onClick={clickHandler}
         />
         <input
           type="button"
-          className="down"
+          className="up"
           value="Name"
-          onClick={clickHandler}
-        />
-        <input
-          type="button"
-          className="down"
-          value="Search"
           onClick={clickHandler}
         />
       </form>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const Filter = props => {
   let handleChange = e => {
-    props.filterSelected(e.target.value);
+    props.filterSelected(e.target.value, props.data);
   };
   return (
     <section className="filter">
