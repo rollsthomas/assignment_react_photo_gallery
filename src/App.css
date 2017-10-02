@@ -115,6 +115,7 @@ input.up {
 
 .card {
   width: 30%;
+  min-width: 200px;
   margin: 1rem;
   text-align: left;
   border: 1px solid gray;
