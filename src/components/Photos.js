@@ -15,7 +15,6 @@ export const Photos = props => {
 };
 
 Photos.protoTypes = {
-  data: PropTypes.arrayOf(Object).isRequired,
-  filter: PropTypes.func.isRequired
+  data: PropTypes.arrayOf(Object).isRequired
 };
 export default Photos;

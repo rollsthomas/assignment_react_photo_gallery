@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Filter = props => {
   let handleChange = e => {
-    props.filterSelected(e.target.value, props.data);
+    props.filterSelected(e.target.value);
   };
   return (
     <section className="filter">

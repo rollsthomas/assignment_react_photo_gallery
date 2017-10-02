@@ -105,10 +105,7 @@ class App extends Component {
           <Filter filterSelected={this.handleFilter} />
           <Sort sorting={this.sorting} data={this.state.photosArray} />
         </div>
-        <Photos
-          data={this.state.photosArray}
-          filter={this.state.filter_selected}
-        />
+        <Photos data={this.state.photosArray} />
       </div>
     );
   }

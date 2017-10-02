@@ -2,19 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Search = props => {
+  const { searchPhotos: Photos, searchVal: val, searchInput: input } = props;
   const handleSubmit = e => {
     e.preventDefault();
-    props.searchPhotos(props.searchVal);
+    Photos(val);
   };
   const handleChange = e => {
-    props.searchInput(e.target.value);
+    input(e.target.value);
   };
   return (
     <section className="search">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          value={props.searchVal}
+          value={val}
           name="search"
           placeholder="Search by name or keyword"
           onChange={handleChange}

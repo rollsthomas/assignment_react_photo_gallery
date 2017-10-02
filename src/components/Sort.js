@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Sort = props => {
+  const { data, sorting } = props;
   let clickHandler = e => {
     if (e.target.className == "down") {
       e.target.className = "up";
     } else e.target.className = "down";
-    props.sorting(e.target.value, props.data, e.target.className);
+    sorting(e.target.value, data, e.target.className);
   };
   return (
     <section className="sort">
