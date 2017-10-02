@@ -3,7 +3,6 @@ import "../reset.css";
 import "../App.css";
 import Search from "./Search";
 import Photos from "./Photos";
-import Footer from "./Footer";
 import Filter from "./Filter";
 import Sort from "./Sort";
 import InstagramResponse from "../photos";
@@ -110,7 +109,6 @@ class App extends Component {
           data={this.state.photosArray}
           filter={this.state.filter_selected}
         />
-        <Footer />
       </div>
     );
   }

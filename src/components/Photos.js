@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import Card from "./Card";
 
 export const Photos = props => {
@@ -13,13 +14,8 @@ export const Photos = props => {
   );
 };
 
+Photos.protoTypes = {
+  data: PropTypes.arrayOf(Object).isRequired,
+  filter: PropTypes.func.isRequired
+};
 export default Photos;
-/****************************
-const cards = props.data.map((card, i, imgArr) => {
-    if (props.filter === "all") {
-      return <Card key={card.id} data={card} />;
-    } else if (card.filter === props.filter) {
-      return <Card key={card.id} data={card} />;
-    }
-  });
-*****************************/

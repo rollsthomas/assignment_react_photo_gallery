@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const Card = props => {
   let date = new Date(props.data.created_time * 1000);
@@ -18,6 +19,10 @@ const Card = props => {
       </figcaption>
     </figure>
   );
+};
+
+Card.propTypes = {
+  data: PropTypes.object.isRequired
 };
 
 export default Card;

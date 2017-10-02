@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const Sort = props => {
   let clickHandler = e => {
@@ -26,6 +27,11 @@ const Sort = props => {
       </form>
     </section>
   );
+};
+
+Sort.propTypes = {
+  data: PropTypes.arrayOf(Object).isRequired,
+  sorting: PropTypes.func.isRequired
 };
 
 export default Sort;

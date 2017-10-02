@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const Search = props => {
   const handleSubmit = e => {
@@ -22,6 +23,12 @@ const Search = props => {
       </form>
     </section>
   );
+};
+
+Search.propTypes = {
+  searchVal: PropTypes.string,
+  searchInput: PropTypes.func.isRequired,
+  searchPhotos: PropTypes.func.isRequired
 };
 
 export default Search;

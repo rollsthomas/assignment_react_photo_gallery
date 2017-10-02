@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const Filter = props => {
   let handleChange = e => {
@@ -20,6 +21,10 @@ const Filter = props => {
       </form>
     </section>
   );
+};
+
+Filter.propTypes = {
+  filterSelected: PropTypes.func.isRequired
 };
 
 export default Filter;
